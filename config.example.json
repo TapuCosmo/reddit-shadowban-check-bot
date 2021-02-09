@@ -7,5 +7,7 @@
   },
   "owner": "<PUT YOUR USERNAME HERE, WITHOUT /u/>",
   "targetSubreddit": "ShadowBan",
+  "mentionCheckTimeout": 30000,
+  "postCheckTimeout": 30000,
   "postCheckTimestampLimit": "<EVALUATE Date.now() AND PASTE HERE AS A NUMBER (REMOVE QUOTE MARKS)>"
 }
