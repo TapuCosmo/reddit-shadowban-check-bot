@@ -5,9 +5,8 @@ module.exports = {
     name: "reddit-shadowban-check-bot",
     script: "src/index.js",
     watch: false,
-    exec_mode: "cluster",
+    exec_mode: "fork",
     instances: 1,
-    listen_timeout: 60000,
     kill_timeout: 10000,
     exp_backoff_restart_delay: 500
   }]
