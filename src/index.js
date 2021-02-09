@@ -53,7 +53,7 @@ async function checkMentions() {
             console.error(e);
           }
         }
-        msg.reply(`**/u/${targetUsername} is __not__ shadowbanned**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
+        msg.reply(`**/u/${targetUsername} is *not* shadowbanned**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
         console.log(`Checked ${targetUsername}: not shadowbanned`);
       } catch (e) {
         console.error(e);
@@ -104,7 +104,7 @@ async function checkPosts() {
             console.error(e);
           }
         }
-        msg.reply(`**/u/${targetUsername} is __not__ shadowbanned**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
+        msg.reply(`**/u/${targetUsername} is *not* shadowbanned**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
         console.log(`Checked ${targetUsername}: not shadowbanned`);
         await msg.hide();
       } catch (e) {
