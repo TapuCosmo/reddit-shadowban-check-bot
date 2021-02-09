@@ -34,18 +34,18 @@ async function checkMentions() {
         try {
           const targetUser = await bot.getUser(targetUsername).fetch();
           if (targetUser.is_suspended) {
-            msg.reply(`**/u/${targetUsername} is suspended**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
+            msg.reply(`**/u/${targetUsername} is suspended**.\n\n---\n\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
             console.log(`Checked ${targetUsername}: suspended`);
             continue;
           }
         } catch (e) {
           if (e.statusCode === 404) {
             if (await bot.checkUsernameAvailability(targetUsername)) {
-              msg.reply(`**/u/${targetUsername} does not currently exist**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
+              msg.reply(`**/u/${targetUsername} does not currently exist**.\n\n---\n\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
               console.log(`Checked ${targetUsername}: does not exist`);
               continue;
             } else {
-              msg.reply(`**/u/${targetUsername} is shadowbanned**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
+              msg.reply(`**/u/${targetUsername} is shadowbanned**.\n\n---\n\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
               console.log(`Checked ${targetUsername}: shadowbanned`);
               continue;
             }
@@ -53,7 +53,7 @@ async function checkMentions() {
             console.error(e);
           }
         }
-        msg.reply(`**/u/${targetUsername} is *not* shadowbanned**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
+        msg.reply(`**/u/${targetUsername} is *not* shadowbanned**.\n\n---\n\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
         console.log(`Checked ${targetUsername}: not shadowbanned`);
       } catch (e) {
         console.error(e);
@@ -82,7 +82,7 @@ async function checkPosts() {
         try {
           const targetUser = await bot.getUser(targetUsername).fetch();
           if (targetUser.is_suspended) {
-            msg.reply(`**/u/${targetUsername} is suspended**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
+            msg.reply(`**/u/${targetUsername} is suspended**.\n\n---\n\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
             console.log(`Checked ${targetUsername}: suspended`);
             await msg.hide();
             continue;
@@ -90,12 +90,12 @@ async function checkPosts() {
         } catch (e) {
           if (e.statusCode === 404) {
             if (await bot.checkUsernameAvailability(targetUsername)) {
-              msg.reply(`**/u/${targetUsername} does not currently exist**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
+              msg.reply(`**/u/${targetUsername} does not currently exist**.\n\n---\n\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
               console.log(`Checked ${targetUsername}: does not exist`);
               await msg.hide();
               continue;
             } else {
-              msg.reply(`**/u/${targetUsername} is shadowbanned**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
+              msg.reply(`**/u/${targetUsername} is shadowbanned**.\n\n---\n\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
               console.log(`Checked ${targetUsername}: shadowbanned`);
               await msg.hide();
               continue;
@@ -104,7 +104,7 @@ async function checkPosts() {
             console.error(e);
           }
         }
-        msg.reply(`**/u/${targetUsername} is *not* shadowbanned**.\n---\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
+        msg.reply(`**/u/${targetUsername} is *not* shadowbanned**.\n\n---\n\n*^(This is an automatic reply. Contact) ^[/u/${config.owner}](https://www.reddit.com/user/${config.owner}) ^(if there are any issues.)*`);
         console.log(`Checked ${targetUsername}: not shadowbanned`);
         await msg.hide();
       } catch (e) {
