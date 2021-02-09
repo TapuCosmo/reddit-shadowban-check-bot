@@ -1,0 +1,24 @@
+{
+  "name": "reddit-shadowban-check-bot",
+  "version": "1.0.0",
+  "description": "A bot that checks whether a reddit user is shadowbanned. Mainly for use with /r/ShadowBan.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .js ./src",
+    "start": "node ./src/index.js"
+  },
+  "keywords": [
+    "reddit",
+    "bot",
+    "shadowban",
+    "check"
+  ],
+  "author": "Vietbao Tran (TapuCosmo)",
+  "license": "MIT",
+  "dependencies": {
+    "snoowrap": "^1.22.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0"
+  }
+}

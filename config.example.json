@@ -1,0 +1,11 @@
+{
+  "account": {
+    "username": "<PUT BOT USERNAME HERE, WITHOUT /u/>",
+    "password": "<PUT PASSWORD HERE>",
+    "clientID": "<PUT CLIENT ID HERE>",
+    "clientSecret": "<PUT CLIENT SECRET HERE>"
+  },
+  "owner": "<PUT YOUR USERNAME HERE, WITHOUT /u/>",
+  "targetSubreddit": "ShadowBan",
+  "postCheckTimestampLimit": "<EVALUATE Date.now() AND PASTE HERE AS A NUMBER (REMOVE QUOTE MARKS)>"
+}
